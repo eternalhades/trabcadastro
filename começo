@@ -1,0 +1,113 @@
+#include <stdio.h>
+#define TAM 50
+#define MAX_STRING 100
+
+
+
+typedef struct Pessoa {
+char nome[MAX_STRING];
+int id;
+int cpf;
+int datans;
+}TPessoa;
+
+
+void cadastro(TPessoa pessoas[], int pe_pessoas) {
+int i;
+
+
+
+     for (i=0; i<pe_pessoas; i++) {
+
+
+
+   printf("Entre com o nome:\n");
+   fgets( pessoas[i].nome, MAX_STRING-1, stdin);
+   getchar();
+
+
+
+
+   printf("Entre com a identidade:\n");
+   fflush(stdin);
+   scanf(" %d", &pessoas[i].id);
+
+
+
+   printf("Entre com o cpf:\n");
+   fflush(stdin);
+   scanf(" %d", &pessoas[i].cpf);
+
+
+
+   printf("Entre com a data de nascimento:\n");
+   fflush(stdin);
+   scanf(" %d", &pessoas[i].datans);
+
+   printf("parabens cadastro concluido\n");
+
+
+   }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main(){
+
+    TPessoa pessoas[TAM];
+    int i;
+    int escolha;
+    int pe_pessoas=2;
+       printf("CADASTRO DE PESSOAS(limite-50):\n");
+       printf("\n1-Cadastrar\n");
+       printf("\n2-Listar\n");
+       printf("\n3-Pesquisar\n");
+       printf("\n4-Atualizar\n");
+       printf("\n5-Remover\n");
+       printf("\n6-Sair\n");
+       printf("\ndigite qual opcao voce deseja:\n");
+       scanf("%d", &escolha);
+
+          if(escolha==1){
+
+             cadastro( pessoas, pe_pessoas);
+
+
+          }
+
+
+
+         if(escolha==2){
+
+
+            printf(" \n %s ", pessoas[i].nome);
+            printf(" \n %d ", pessoas[i].id);
+            printf(" \n %d ", pessoas[i].cpf);
+            printf(" \n %d ", pessoas[i].datans);
+
+
+
+         }
+
+
+
+
+
+
+
+
+
+
+}
