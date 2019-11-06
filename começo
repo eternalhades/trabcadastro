@@ -9,7 +9,7 @@ char nome[MAX_STRING];
 int id;
 int cpf;
 int datans;
-}TPessoa;
+}tpessoa;
 
 
 void cadastro(TPessoa pessoas[], int pe_pessoas) {
